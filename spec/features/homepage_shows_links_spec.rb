@@ -1,7 +1,7 @@
-feature "homepage" do
-  scenario "displays links" do
-    link = Link.create(title: "Google", url: "www.google.com")
-    visit "/"
-    expect(page).to have content "Google"
+feature "Display Links" do
+  scenario "Links appear when you go to homepage" do
+    Link.create(title: "Google", url: "www.google.com")
+    visit "/links"
+    expect(page).to have_content "Google"
   end
 end

@@ -3,6 +3,10 @@ require 'capybara/rspec'
 require_relative '../app/models/link'
 require 'data_mapper'
 require 'dm-postgres-adapter'
+require_relative '../app/app'
+require 'sinatra'
+
+Capybara.app = BookmarkManager
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
