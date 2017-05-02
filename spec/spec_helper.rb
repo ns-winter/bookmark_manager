@@ -5,7 +5,9 @@ require 'data_mapper'
 require 'dm-postgres-adapter'
 require_relative '../app/app'
 require 'sinatra'
+require 'database_cleaner'
 
+DatabaseCleaner.strategy = :truncation
 Capybara.app = BookmarkManager
 
 RSpec.configure do |config|
