@@ -1,3 +1,4 @@
+ENV['RACK_ENV'] = 'test'
 require 'capybara'
 require 'capybara/rspec'
 require_relative '../app/models/link'
@@ -6,10 +7,8 @@ require 'dm-postgres-adapter'
 require_relative '../app/app'
 require 'sinatra'
 require 'database_cleaner'
-
 DatabaseCleaner.strategy = :truncation
 Capybara.app = BookmarkManager
-
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
