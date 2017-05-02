@@ -1,5 +1,8 @@
 require 'capybara'
 require 'capybara/rspec'
+require_relative '../app/models/link'
+require 'data_mapper'
+require 'dm-postgres-adapter'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
