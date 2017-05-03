@@ -1,7 +1,6 @@
 feature 'Adding links' do
 
   scenario 'adds YouTube link' do
-    DatabaseCleaner.clean
     visit '/links/new'
     fill_in 'title', with: 'YouTube'
     fill_in 'url', with: 'www.youtube.com'
