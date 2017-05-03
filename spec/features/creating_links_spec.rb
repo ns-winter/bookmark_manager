@@ -1,9 +1,5 @@
 feature 'Adding links' do
 
-  after do
-    DatabaseCleaner.clean
-  end
-
   scenario 'adds YouTube link' do
     DatabaseCleaner.clean
     visit '/links/new'
