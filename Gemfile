@@ -7,6 +7,7 @@ gem "dm-postgres-adapter"
 gem "sinatra"
 gem "rack"
 gem "dm-transactions"
+gem 'pg'
 group :test do
   gem 'database_cleaner'
 end
