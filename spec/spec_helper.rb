@@ -7,6 +7,8 @@ require 'dm-postgres-adapter'
 require_relative '../app/app'
 require 'sinatra'
 require 'database_cleaner'
+require_relative './web_helper_spec.rb'
+require 'bcrypt'
 
 Capybara.app = BookmarkManager
 
