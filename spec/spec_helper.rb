@@ -7,8 +7,8 @@ require 'dm-postgres-adapter'
 require_relative '../app/app'
 require 'sinatra'
 require 'database_cleaner'
-require_relative './web_helper_spec.rb'
 require 'bcrypt'
+require_relative './helpers/session'
 
 Capybara.app = BookmarkManager
 
@@ -31,5 +31,6 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
+  config.include SessionHelpers
   config.shared_context_metadata_behavior = :apply_to_host_groups
 end

@@ -29,5 +29,5 @@ feature 'User sign up' do
     expect { sign_up }.to_not change(User, :count)
     expect(page).to have_content('Email is already taken')
   end
-
+  
 end
