@@ -5,6 +5,7 @@ gem "rspec"
 gem "data_mapper"
 gem "dm-postgres-adapter"
 gem "sinatra"
+gem "sinatra-flash"
 gem "rack"
 gem "dm-transactions"
 gem 'pg'
